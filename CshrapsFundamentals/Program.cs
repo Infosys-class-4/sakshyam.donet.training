@@ -30,7 +30,7 @@ string employee_Name = "Sakshyam shrestha";
 byte Age =  25;
 string Weight = "75kg";
 bool Passport = true;
-DateTime DateOfBirth = new DateTime(2055, 07, 16);
+DateTime DateOfBirth = new DateTime(2055, 05, 16);
 
 
 Console.WriteLine(employee_Name);
