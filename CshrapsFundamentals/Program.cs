@@ -26,16 +26,24 @@
  
 
 
-string employee_Name = "Sakshyam shrestha";
-byte Age =  25;
-string Weight = "75kg";
-bool Passport = true;
-DateTime DateOfBirth = new DateTime(2055, 05, 16);
+//string employee_Name = "Sakshyam shrestha";
+//byte Age =  25;
+//string Weight = "75kg";
+//bool Passport = true;
+//DateTime DateOfBirth = new DateTime(2055, 05, 16);
 
 
-Console.WriteLine(employee_Name);
-Console.WriteLine(Age);
-Console.WriteLine(Weight);
-Console.WriteLine(Passport);
-Console.WriteLine(DateOfBirth);
-Console.WriteLine(employee_Name, Age, Weight, Passport, DateOfBirth);
+//Console.WriteLine(employee_Name);
+//Console.WriteLine(Age);
+//Console.WriteLine(Weight);
+//Console.WriteLine(Passport);
+//Console.WriteLine(DateOfBirth);
+//Console.WriteLine(employee_Name, Age, Weight, Passport, DateOfBirth);
+
+
+//People person1 = new();
+//person1.age = 10;
+//person1.name = "sakshyam";
+//string message = person1.GetLegalGreeting();
+//Console.WriteLine(message);
+//Console.WriteLine(person1.name);
