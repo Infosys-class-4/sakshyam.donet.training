@@ -12,56 +12,43 @@
 // c# is multiple-paradigm language
 
 
-//class People
-//{
-// public string name;
-//public byte age;
-
-
-// public string GetLegalGreeting()
-//  {
-//   if (age < 18)
-// {
-//   return "you are underage my boy";
-//}
-//else
-// {
-//   return "you are okay!";
-//}
-//}
-//}
-
-class bikes
+class People
 {
-    public string model;
-    public string color;
-    public int year;
+    public string name;
+    public byte age;
+    public int Weight;
 
-    static void Main(string[] args)
 
+    public string GetLegalGreeting()
     {
-        bikes kawasaki = new bikes();
-        kawasaki.model = "kawasaki";
-        kawasaki.color = "red";
-        kawasaki.year = 1969;
+        if (age < 18)
+        {
+            return "you are underage my boy";
+        }
+        
+        if (age ==  20)
+        {
+            return"your are ready man!";
+        }
 
-        bikes honda = new bikes();
-        honda.model = "honda";
-        honda.color = "white";
-        honda.year = 2005;
+        else
+        {
+            return "you are notokay!";
+        }
 
+        
+    }
+    public string GetOutput()
+    {
+          if (Weight < 20)
+        {
+            return"your are not ready my boy";
+        }
 
-        bikes bajaj = new bikes();
-        bajaj.model = "bajaj";
-        bajaj.color = "white";
-        bajaj.year = 2005;
+        else
+        {
+            return "your weight is good";
+        }
 
-        Console.WriteLine(kawasaki.model);
-        Console.WriteLine(honda.model);
-        Console.WriteLine(bajaj.model);
     }
 }
-
-
-
-

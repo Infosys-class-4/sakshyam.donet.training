@@ -41,9 +41,15 @@
 //Console.WriteLine(employee_Name, Age, Weight, Passport, DateOfBirth);
 
 
-//People person1 = new();
-//person1.age = 10;
-//person1.name = "sakshyam";
-//string message = person1.GetLegalGreeting();
-//Console.WriteLine(message);
-//Console.WriteLine(person1.name);
+People person1 = new();
+person1.age = 20;
+person1.name = "mike";
+string message = person1.GetLegalGreeting();
+Console.WriteLine(message);
+Console.WriteLine(person1.name);
+People person2 = new();
+person2.name = "tyson";
+person2.Weight = 50;
+string output = person2.GetOutput();
+Console.WriteLine(output);
+Console.WriteLine(person2.name);
