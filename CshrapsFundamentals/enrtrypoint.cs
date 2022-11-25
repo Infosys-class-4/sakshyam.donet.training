@@ -58,5 +58,6 @@ class EntryPoint
         var y = emp.Salary;
 
         var t = emp.Name;
+
     }
 }
