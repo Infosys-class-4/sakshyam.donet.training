@@ -1,106 +1,103 @@
 using System;
 class Methods
 {
-    // returs nothing, takes no argument
+    // Returns nothing, takes no arguments
     public void Print()
     {
-        Console.WriteLine("i am a simple method");
+        Console.WriteLine("I am a simple method");
     }
-    // Return nothing, takes some argument 
-    public void PrintSomething(string message)
+
+    // Retunrs nothing, takes some arguments
+    public void Print(string message)
     {
         Console.WriteLine(message);
     }
-    //REturn something , takes some arguments
-    public double Add(double num1, double num2, double num3)
+
+    // Returns something, takes some arguments
+    // num3 is optional
+    public double Add(double num1, double num2, double num3 = 0)
     {
         var sum = num1 + num2 + num3;
         return sum;
     }
 
-    // Returns something, takes arbitrary number of argument
-    public int Multiply(params int[] numbers)
+    // Expression bodied members
+    public double AddNumbers(double num1, double num2, double num3 = 0) => num1 + num2 + num3;
+       
+    // returns something, takes arbitrary number of arguments
+    public long Multiply(params int[] numbers)
     {
-        var product = 1;
-        foreach (var num in numbers)
+        long product = 1;
+        foreach(int num in numbers) // {3, 4, 7, 8}
         {
             product = product * num;
+            //product *= num;
         }
 
         return product;
     }
 
-    public (byte, byte) GetMinMax(byte[] nums)
+    // returns multiple values, takes some arguments
+    public (byte, byte) GetMinMax(params byte[] nums)
     {
-        byes min = byte.MaxValue Max = byte.MinValue;
-        foreach (byte n is nums)  //nums={1,2,3,4}
+        byte min = byte.MaxValue, max = byte.MinValue;
+        foreach(byte n in nums) // nums={2,3,1,4}
         {
-            if (n < min) ;
+            if(n < min)
             {
                 min = n;
             }
-
-            if (n > Max) ;
+            if(n > max)
             {
                 max = n;
             }
-
-            return (min, max);
         }
+
+        return (min, max);
     }
 
-
-    // write  a method which returns average of all 4 numbers supplied as parameter. 
-
+    // CW1: write a method which returns average of all 4 numbers supplied as parameter.
 
     public float CalculateAverage(short n1, short n2, short n3, short n4)
     {
-        float result = ((float)n1 + n2 + n3 + n4) / 4;
-        return result;
-
-    }
-
-    public float CalculateAverageArray(short[] number)
-    {
-
-        return result;
-        int i = 0;
-        int sum = 0;
-        float average = 0.0F;
-        foreach (short num is number)
-        {
-            sum = sum + num;
-        }
-
-        average = (float)sum / number.Length;
+        float average = ((float)n1 + n2 + n3 + n4) / 4;
         return average;
     }
 
-    // modify method to return average and  minimun of all.
-
-    public float CalculateAverage(float[] number)
+    // CW: Modify above method to take array of numbers and calculate average of all.
+    public float CalculateAverage(float[] numbers)
     {
-
-
-        int i = 0;
-        int sum = 0;
-        float average = 0.0F;
-        foreach (short num is number)
+        float average = 0;
+        float sum = 0;
+        foreach(short num in numbers)
         {
             sum = sum + num;
-              if (n < min) ;
-                {
-                    min = num;
-                }
+        }
+        average = sum / numbers.Length ;
+
+        return average;
+    }
+ 
+    // CW - Modify same method to return average and minimum of all.
+    public (float, short) CalculateAverageAndMinimum(params short[] numbers)
+    {
+        float average = 0;
+        float sum = 0;
+        short min = short.MaxValue;
+
+        foreach(short num in numbers)
+        {
+            sum = sum + num;
+            if(num < min)
+            {
+                min = num;
             }
         }
 
-        average = (float)sum / number.Length;
-      }
-       
+        average = sum / numbers.Length ;
 
-
-
+        return (average, min);
+    }
 
 
 }
