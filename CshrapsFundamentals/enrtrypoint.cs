@@ -59,5 +59,32 @@ class EntryPoint
 
         var t = emp.Name;
 
+        
+        House house1 = new House(4,40);
+        house1.Length = 34.4f;
+        house1.Width = 25.33f;
+       var chatAreaHouse1 = house1.GetAreaofChat();
+
+
+        House house2 = new House(5,50,30.22f,40.22f);
+        var chatAreaHouse2 = house2.GetAreaofChat();
+
+        House house3 = new House(6,60);
+        House house4 = new House(7,20);
+
+        //IB d1 = new D();
+        //d1.Start();
+
+
+
+        collection call = new collection();
+        call.learnlist();
+
+
+        
+
+        collection get = new collection();
+        get.LearnDictionary();
+
     }
 }
