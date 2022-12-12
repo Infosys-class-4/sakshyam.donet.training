@@ -1,0 +1,20 @@
+label {
+    display: inline-block; 
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+form {
+    color: navy;
+    text-align: center;
+   
+
+}
+
+h1 {
+    color: crimson;
+}
+
+.Submit{
+    text-align: center;
+}
